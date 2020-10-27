@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
+    <style>
+        body{
+            align-items: center;
+        }
+        .face{
+            margin:150px auto;
+            width: 360px;
+            height: 360px;
+            background: #000;
+            border-radius: 50%;
+            position: relative;
+        }
+        .face::before{
+            content: '';
+            width: 40px;
+            height: 40px;
+            background: rgb(255, 255, 255);
+            border-radius: 50%;
+            border: 10px solid black;
+            position: absolute;
+            top: 0;
+            left: 11%;
+        }
+        .face::after{
+            content: '';
+            width: 40px;
+            height: 40px;
+            background: rgb(255, 255, 255);
+            border-radius: 50%;
+            border: 10px solid black;
+            position: absolute;
+            top: 0;
+            right: 11%;
+        }
+        .mouse{
+            position: relative;
+            background: white;
+            width: 160px;
+            height: 110px;
+            border-radius: 130px 130px 130px 130px/90px 90px 90px 90px;
+            top:40%;
+            left: 28%;
+        }
+        .mouse::before{
+            content: '';
+            position: absolute;
+            background: rgb(0, 0, 0);
+            width: 45px;
+            height:45px;
+            border: 10px solid white;
+            border-radius:50%;
+            top:-50%;
+            left: -15%;
+        }
+        .mouse::after{
+            content: '';
+            position: absolute;
+            background: rgb(0, 0, 0);
+            width: 45px;
+            height:45px;
+            border: 10px solid white;
+            border-radius:50%;
+            top:-50%;
+            right: -15%;
+        }
+        .nose{
+            width: 40px;
+            height: 25px;
+            background: #000;
+            border-radius: 40px 40px 40px 40px/25px 25px 25px 25px;
+            position: relative;
+            top: 10%;
+            left: 38%;
+        }
+        .nose::before{
+            content: '';
+            width: 95px;
+            height: 95px;
+            background: #fe0000;
+            border-radius: 50%;
+            position: absolute;
+            top:-11px;
+            left:125px;
+        }
+        .nose::after{
+            content: '';
+            width: 95px;
+            height: 95px;
+            background: #fe0000;
+            border-radius: 50%;
+            position: absolute;
+            top: -11px;
+            right: 125px;
+        }
+        .hold{
+            width: 100px;
+            height: 40px;
+            background: #000;
+            border-radius: 100px 100px 100px 100px/40px 40px 40px 40px;
+            position: relative;
+            top: 25%;
+            left: 20%;
+        }
+        .hold::before{
+            content: '';
+            width: 60px;
+            height: 50px;
+            background: rgb(255, 255, 255);
+            position: absolute;
+            transform: skewX(53deg);
+            top:208%;
+            left: -13%;
+        }
+        .hold::after{
+            content: '';
+            width: 60px;
+            height: 50px;
+            background: rgb(255, 255, 255);
+            position: absolute;
+            transform: skewX(-53deg);
+            top:208%;
+            right:-13%;
+        }
+    </style>
+</head>
+<body>
+    <div class="face">
+        <div class="mouse">
+            <div class="nose"></div>
+            <div class="hold"></div>
+        </div>
+    </div>
+</body>
+</html>
